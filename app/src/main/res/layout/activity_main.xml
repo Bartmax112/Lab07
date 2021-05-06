@@ -1,67 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="43dp"
-        android:layout_weight="1" />
-
-    <TextView
-        android:id="@+id/tekstStanMagazynu"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:layout_weight="1"
-        android:text="TextView" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="10" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-87dp">
 
-        <EditText
-            android:id="@+id/edycjaIlosc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Number" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="252dp"
+            android:layout_height="132dp"
+            android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/tekstJednostka"
+            android:id="@+id/tekstStanMagazynu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="123dp"
+            android:layout_weight="1"
             android:text="TextView" />
 
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="217dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edycjaIlosc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tekstJednostka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/przyciskSkladuj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SKŁADUJ" />
+
+            <Button
+                android:id="@+id/przyciskWydaj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="WYDAJ" />
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="439dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/przyciskSkladuj"
-            android:layout_width="540px"
-            android:layout_height="wrap_content"
-            android:text="SKŁADUJ" />
-
-        <Button
-            android:id="@+id/przyciskWydaj"
-            android:layout_width="540px"
-            android:layout_height="wrap_content"
-            android:text="WYDAJ" />
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
